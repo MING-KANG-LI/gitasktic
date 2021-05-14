@@ -1,6 +1,9 @@
+#----------#
+#Purpose of this script: This is a python function that find a missing number in a list.
+#----------#
 while True:
     try:
-        iter_str = input('Take in numbers, e.g. 1, 2, 3, 4, 5: ')
+        iter_str = input('Take in numbers, e.g. 1, 2, 3: ')
         iter_str = iter_str.split(', ')
         iter_int = []
         for i in iter_str:
@@ -11,8 +14,6 @@ while True:
     except ValueError:
         print('Wrongly type, please type integers only！')
     else:
-        #Step 1: setting up your repository with a python file.
-        #(1)Write a python function that find a missing number in a list
         range_A = range(min(iter_int), max(iter_int)+1)
         list_A = list(range_A)
 
