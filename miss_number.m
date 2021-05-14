@@ -1,11 +1,3 @@
-% SFG's  -- discard
-%inputV=[0,1,2,4,5,6];
-%stopN=max(inputV);
-%FULL=[0:stopN];
-%missingN=setdiff(FULL, inputV);
-%reply=['Missing Numbers : ',num2str(missingN)];
-%disp(reply)
-%=======
 while true
 	try %try...catch...end: https://www.itread01.com/content/1541827408.html
     %try...catch...end用法：https://blog.csdn.net/Intangilble/article/details/83411025
@@ -20,7 +12,7 @@ while true
             if sum(isnan(i)) > 0
                 %Find NaN elements in a matrix: https://www.mathworks.com/matlabcentral/answers/18150-find-nan-elements-in-a-matrix
                 errorStruct.message = 'Data file not found. test';
-                %errorStruct.identifier = 'MyFunction:fileNotFound';
+                %errorStruct.identifier = 'MyFunction:fileNotFound';  
                 error(errorStruct)
                 %raise error: https://www.mathworks.com/help/matlab/ref/error.html
             end
@@ -47,11 +39,10 @@ while true
         disp(['There are multiple missing numbers: ' num2str(miss)])
         break
     elseif length(miss) == 0
-        disp('There is no missing number.')
+        disp('There is no missing number.')    
         break
     end
 end
 
 
 
-%>>>>>>> 5b834717c73e9681f9572fe9f5aba02ecd9076b7
